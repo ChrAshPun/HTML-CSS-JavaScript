@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,500;0,700;0,900;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <title>IT Blog</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <nav>
+    <!-- hamburger -->
+    <div class="hamburger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+    <!-- nav logo -->
+    <div class="nav-logo-subsection">
+      <img src="./png/it.png" alt="it-img">
+      <div class="nav-by-container">
+        <a href="./index.html">IT Blog</a>
+        <p>by Christina Punla</p>
+      </div>
+    </div>
+    <!-- browser search bar -->
+    <div class="search-container">
+      <input id="searchbar" type="text" name="search" placeholder="SEARCH...">
+      <button id="close-button"><i class="fas fa-times fa-lg"></i></button>
+      <button id="search-button" type="submit"><i class="fa fa-search fa-lg"></i></button>
+    </div>
+    <!-- mobile search button -->
+    <button id="mobile-search-button"><i class="fa fa-search fa-lg"></i></button>
+    <!-- nav dividing line -->
+    <div class="nav-line"></div>
+    <!-- nav menu -->
+    <ul class="nav-links">
+      <li><a onclick="navCategory(osArticles)" href="#">OPERATING SYSTEMS</a></li>
+      <li><a onclick="navCategory(printersArticles)" href="#">PRINTERS</a></li>
+      <li><a onclick="navCategory(outlookArticles)" href="#">OUTLOOK</a></li>
+      <li><a onclick="navCategory(pptArticles)" href="#">POWERPOINT</a></li>
+      <li><a onclick="navCategory(adArticles)" href="#">ACTIVE DIRECTORY</a></li>
+      <li><a onclick="navCategory(eacArticles)" href="#">EXCHANGE</a></li>
+    </ul>
+  </nav>
+  <!-- header -->
+  <header>
+    <h1>Welcome to my IT Blog</h1>
+    <p>This website is a recollection of some of the fixes I made while working as an IT technician. Scroll down to see
+      how I resolved common IT issues or select a category from the navigation menu.</p>
+  </header>
+  <!-- OS Articles -->
+  <div class="article operating-systems">
+    <div class="article-left-subsection">
+      <p class="category">CATEGORY: OPERATING SYSTEMS | WINDOWS 7</p>
+      <h1 class="article-title">"My drives are missing on Windows Explorer"</h1>
+      <p class="article-subtitle bold">Change the Windows Explorer target path</p>
+      <p class="article-instructions">If you are using Windows 7 and Windows Explorer is not showing all of your
+        folders and
+        drives, you may need to fix the target path.</p>
+      <ol>
+        <li>Open the <span class="bold">Windows Explorer Properties</span></li>
+        <li>Select the <span class="bold">Shortcut</span> tab</li>
+        <li>Set the <span class="bold">Target path to: %windir%\explorer.exe</span></li>
+      </ol>
+    </div>
+    <div class="article-right-subsection">
+      <img src="./png/winexplorertarget.png" alt="winexplorertarget">
+    </div>
+  </div>
+  <div class="article operating-systems">
+    <div class="article-left-subsection">
+      <p class="category">CATEGORY: OPERATING SYSTEMS | WINDOWS 10</p>
+      <h1 class="article-title">"How can I set File Explorer to open to "This PC" instead of "Quick Access?"</h1>
+      <p class="article-subtitle bold">Edit Folder Options</p>
+      <p class="article-instructions">Open File Explorer and edit the General settings</p>
+      <ol>
+        <li>Open <span class="bold">File Explorer</span></li>
+        <li>Select <span class="bold">File</span> at the top left</li>
+        <li>Select <span class="bold">Change folder and search options</span></li>
+        <li>Set <span class="bold">Open File Explorer to: This PC</span></li>
+      </ol>
+    </div>
+    <div class="article-right-subsection">
+      <img src="./png/fileexplorerthispc.png" alt="fileexplorerthispc">
+    </div>
+  </div>
+  <div class="article operating-systems">
+    <div class="article-left-subsection">
+      <p class="category">CATEGORY: OPERATING SYSTEMS</p>
+      <h1 class="article-title">"I need access to a network drive"</h1>
+      <p class="article-subtitle bold">Step 1. Set the Security permissions</p>
+      <p class="article-instructions">If a user needs access to a specific folder, you may need to configure the
+        Security
+        Properties to give the user access to the contents in that folder before mapping the network drive.</p>
+      <ol>
+        <li>Right-click the folder the user needs access to</li>
+        <li>Select <span class="bold">Properties</span> and go to the <span class="bold">Security</span> tab</li>
+        <li>click <span class="bold">Edit...</span> and add the user/group</li>
+        <li>Check all appropriate Allow checkboxes to grant the user/group access to the folder</li>
+      </ol>
+      <p class="article-subtitle bold">Step 2. Map the network drive using File Explorer</p>
+      <p class="article-instructions">After configuring the Security permissions, manually map the network drive on
+        the user's
+        computer.</p>
+      <ol>
+        <li>Open <span class="bold">File Explorer</span></li>
+        <li>right-click <span class="bold">This PC</span> and select <span class="bold">Map network drive…</span></li>
+        <li>In the <span class="bold">Folder</span> box type the folder path like this: <span
+            class="bold">\\server\share</span></li>
+      </ol>
+      <p class="article-notes">Make sure you can ping the server</p>
+      <p class="article-notes">Use the IP address of the server if the hostname isn’t working</p>
+    </div>
+    <div class="article-right-subsection">
+      <img src="./png/mapdrives.png" alt="mapdrives">
+    </div>
+  </div>
+  <div class="article operating-systems">
+    <div class="article-left-subsection">
+      <p class="category">CATEGORY: OPERATING SYSTEMS | WINDOWS 10</p>
+      <h1 class="article-title">Error: "You can't connect to the file share because it's not secure."</h1>
+      <p class="article-subtitle bold">Enable SMBv1</p>
+      <p class="article-instructions">SMBv1 is an old and insecure network file sharing protocol that is disabled on
+        Windows
+        10
+        by
+        default.</p>
+      <ol>
+        <li>Open <span class="bold">Control Panel</span></li>
+        <li>select <span class="bold">Programs and Features</span></li>
+        <li>Check <span class="bold">SMB 1.0/CIFS File Sharing Support</span></li>
+      </ol>
+    </div>
+    <div class="article-right-subsection">
+      <img src="./png/smb1error.png" alt="smb1error">
+    </div>
+  </div>
+  <!-- Printer Articles -->
+  <div class="article printers">
+    <div class="article-left-subsection">
+      <p class="category">CATEGORY: PRINTERS</p>
+      <h1 class="article-title">How to add a Printer by IP Address</h1>
+      <p class="article-subtitle bold">Step 1. Add the printer from the Control Panel</p>
+      <p class="article-instructions">Before you can add the printer to the client's desktop, make sure you know the
+        IPv4
+        address of the printer or print a configuration page. If you are helping the client remotely, assist them on
+        how
+        to print a configuration page from the printer.</p>
+      <ol>
+        <li>Open <span class="bold">Control Panel</span> and select <span class="bold">Devices and Printers</span>
+        </li>
+        <li>click <span class="bold">Add a printer</span></li>
+        <li>select <span class="bold">"The printer that I want isn’t listed"</span></li>
+        <li>select <span class="bold">Add a printer using a TCP/IP address or hostname</span></li>
+        <li>Enter the IPv4 address and select the correct driver on the next page</li>
+      </ol>
+      <p class="article-subtitle bold">Step 2. Print a test page</p>
+      <p class="article-instructions">It's best practice to make sure the printer is printing correctly before ending
+        your
+        session with the client.</p>
+      <ol>
+        <li>Open <span class="bold">Control Panel</span> and select <span class="bold">Devices and Printers</span>
+        </li>
+        <li>Right-click the printer and select <span class="bold">Printer Properties</span></li>
+        <li>Select <span class="bold">Print Test Page</span></li>
+      </ol>
+    </div>
+    <div class="article-right-subsection">
+      <img src="./png/printbyip.png" alt="printbyip">
+    </div>
+  </div>
+  <div class="article printers">
+    <div class="article-left-subsection">
+      <p class="category">CATEGORY: PRINTERS</p>
+      <h1 class="article-title">"My printer is randomly printing pages"</h1>
+      <p class="article-subtitle bold">Clear the Print Spooler</p>
+      <p class="article-instructions">If a printer is randomly printing pages on it's own, try clearing the Print
+        Spooler.</p>
+      <ol>
+        <li>Press <span class="bold">Winkey + r</span> and type <span class="bold">services.msc</span></li>
+        <li>right-click <span class="bold">Print Spooler</span> select <span class="bold">Stop</span></li>
+        <li>Next, navigate to <span class="bold">C:\Windows\System32\spool\PRINTERS</span></li>
+        <li>Delete all the files in that folder and restart the <span class="bold">Print Spooler</span></li>
+      </ol>
+    </div>
+    <div class="article-right-subsection">
+      <img src="./png/clearspooler.png" alt="clearspooler">
+    </div>
+  </div>
+  <div class="article printers">
+    <div class="article-left-subsection">
+      <p class="category">CATEGORY: PRINTERS</p>
+      <h1 class="article-title">"My printer is printing a crazy symbols!"</h1>
+      <p class="article-subtitle bold">Install the latest driver</p>
+      <p class="article-instructions">If a printer is printing hieroglyphics it's usually a driver issue. Go to the
+        manufacturer's website to install the latest driver. Every installation process is different. If you've
+        installed the latest driver and the printer is still not printing correctly, make sure the printer is using
+        the
+        latest driver from the Control Panel.</p>
+      <ol>
+        <li>Open <span class="bold">Control Panel</span> and select <span class="bold">Devices and Printers</span>
+        </li>
+        <li>Right-click the printer and select <span class="bold">Printer Properties</span></li>
+        <li>Click the <span class="bold">Advanced</span> tab</li>
+        <li>click on the Driver drop-down list and select the latest driver</li>
+      </ol>
+    </div>
+    <div class="article-right-subsection">
+      <img src="./png/hieroglyphics.png" alt="printbyip">
+    </div>
+  </div>
+  <!-- Outlook -->
+  <div class="article outlook">
+    <div class="article-left-subsection">
+      <p class="category">CATEGORY: OUTLOOK</p>
+      <h1 class="article-title">Error: "The set of folders cannot be opened."</h1>
+      <p class="article-subtitle bold">Delete the .ost file and recreate the Outlook profile</p>
+      <p class="article-instructions">If a client cannot open their Outlook because of this prompt, try deleting
+        corrupt .ost
+        file
+        and recreating their Outlook Profile</p>
+      <ol>
+        <li>Go to <span class="bold">C:\Users\username\AppData\Local\Microsoft\Outlook</span></li>
+        <li>Delete the corrupt .ost file</li>
+        <li>Right-click the printer and select <span class="bold">Printer Properties</span></li>
+        <li>Open <span class="bold">Control Panel</span> and select <span class="bold">Mail</span></li>
+        <li>Click <span class="bold">Add...</span> to create a new profile</li>
+      </ol>
+    </div>
+    <div class="article-right-subsection">
+      <img src="./png/clearspooler.png" alt="clearspooler">
+    </div>
+  </div>
+  <div class="article outlook">
+    <div class="article-left-subsection">
+      <p class="category">CATEGORY: OUTLOOK</p>
+      <h1 class="article-title">Error: "Library not registered."</h1>
+      <p class="article-subtitle bold">Make changes to the Windows Registry</p>
+      <p class="article-instructions">This error usually occurs after a upgrade. There may be an older key in the
+        Windows
+        Registry that needs to be deleted. Backup the key by saving it as an Export before making any changes to the
+        Registry.</p>
+      <ol>
+        <li>Press <span class="bold">Start</span>, type <span class="bold">regedit</span> and click on <span
+            class="bold">Registry Editor</span></li>
+        <li>Nagivate to <span class="bold">HKEY_CLASSES_ROOT\Typelib\0006F062-0000-0000-C00-000000000046</span></li>
+        <li>Backup the folder before deleting it</li>
+        <p class="article-notes">If the registry has both 1.0 and 1.1 folders, delete the 1.0 folder</p>
+        <p class="article-notes">If the registry has both 1.1 and 1.2 folders, delete the 1.2 folder</p>
+        <li>Now try to open <span class="bold">Outlook</span></li>
+        <li>If that doesn't work, try running an <span class="bold">Office repair</span></li>
+      </ol>
+    </div>
+    <div class="article-right-subsection">
+      <img src="./png/librarynotregistered.png" alt="librarynotregistered">
+    </div>
+  </div>
+  <div class="article outlook">
+    <div class="article-left-subsection">
+      <p class="category">CATEGORY: OUTLOOK</p>
+
+      <h1 class="article-title">Error: "Instant Search is not available when Outlook is running with administrator
+        permissions."</h1>
+      <p class="article-subtitle bold">Uncheck “Run As Administrator” for Outlook.exe</p>
+      <p class="article-instructions">If Outlook Instant Search is not working properly, trying reconfiguring the
+        Compatibility
+        settings for Outlook.</p>
+      <ol>
+        <li>For 32-bit Windows go to <span class="bold">C:\Program Files\Microsoft Office\Office14\</span></li>
+        <p class="article-notes">For 64-bit Windows go to <span class="bold">C:\Program Files (x86)\Microsoft
+            Office\Office14\</span></p>
+        <li>Right-click <span class="bold">OUTLOOK.EXE</span> and select <span class="bold">properties</span></li>
+        <li>Under the <span class="bold">Compatibility</span> tab, uncheck <span class="bold">“Run As
+            Administrator”</span></li>
+      </ol>
+    </div>
+    <div class="article-right-subsection">
+      <img src="./png/instantsearch.png" alt="instantsearch">
+    </div>
+  </div>
+  <!-- Powerpoint -->
+  <div class="article powerpoint">
+    <div class="article-left-subsection">
+      <p class="category">CATEGORY: POWERPOINT</p>
+      <h1 class="article-title">"I can't open Powerpoint attachments from Outlook."</h1>
+      <p class="article-subtitle bold">Edit Trust Center settings</p>
+      <p class="article-instructions">If you are getting an error that says <span class="bold">"If you trust the
+          source of
+          this presentation, click Repair."</span> and clicking Repair does not fix the issue, try following these
+        steps.</p>
+      <ol>
+        <li>Open <span class="bold">Powerpoint</span>, click on <span class="bold">File</span> and then <span
+            class="bold">Options</span></li>
+        <li>select <span class="bold">Trust Center</span> and click on <span class="bold">Trust Center
+            settings...</span></li>
+        <li>select <span class="bold">Protected View</span> and <span class="bold">uncheck "Enable Protected View for
+            files originating from the Internet"</span></li>
+      </ol>
+    </div>
+    <div class="article-right-subsection">
+      <img src="./png/protectedview2.png" alt="protectedview2">
+    </div>
+  </div>
+  <!-- Active Directory -->
+  <div class="article active-directory">
+    <div class="article-left-subsection">
+      <p class="category">CATEGORY: ACTIVE DIRECTORY</p>
+
+      <h1 class="article-title">"I'm locked out of my desktop! I can't sign in."</h1>
+      <p class="article-subtitle bold">Unlock the user's account on Active Directory</p>
+      <p class="article-instructions">When a user's login attempts exceed the Account lockout threshold, they'll need
+        an
+        administrator to unlock their account.</p>
+      <ol>
+        <li>Log into the domain controller as an adminstrator and open <span class="bold">Active Directory Users and
+            Computers console</span></li>
+        <li>Find the AD user, right-click and select <span class="bold">Properties</span></li>
+        <li>From the <span class="bold">Account</span> tab check the box next to <span class="bold">Unlock
+            Account</span> and press <span class="bold">OK</span></li>
+      </ol>
+    </div>
+    <div class="article-right-subsection">
+      <img src="./png/unlockadaccount.png" alt="unlockadaccount">
+    </div>
+  </div>
+  <!-- Exchange Articles -->
+  <div class="article exchange">
+    <div class="article-left-subsection">
+      <p class="category">CATEGORY: EXCHANGE</p>
+      <h1 class="article-title">How To Customize Mailbox Size</h1>
+      <p class="article-subtitle bold">Customize the quota settings</p>
+      <p class="article-instructions">If a client is unable to send or receive mail, it may be due to their mailbox
+        being
+        full. You can increase the size of their mailbox from the Exchange Admin Center.</p>
+      <ol>
+        <li>Log into the <span class="bold">Exchange Admin Center</span>, select <span class="bold">Recipients</span>
+          and then <span class="bold">Mailboxes</span></li>
+        <li>Select the mailbox and go to <span class="bold">Properties</span></li>
+        <li>Select <span class="bold">mailbox usage</span> and <span class="bold">check Customize the quota settings
+            for this mailbox</span></li>
+        <p class="article-notes"><span class="bold">Issue a warning at (GB):</span> sets the maximum storage limits
+          before the
+          user receives a warning</p>
+        <p class="article-notes"><span class="bold">Prohibit send at (GB):</span> prevents the user from sending once
+          the
+          limit is reached</p>
+        <p class="article-notes"><span class="bold">Prohibit send and receive at (GB):</span> prevents the user from
+          sending
+          or receiving email once the limit is reached.</p>
+      </ol>
+    </div>
+    <div class="article-right-subsection">
+      <img src="./png/mailboxquota.png" alt="mailboxquota">
+    </div>
+  </div>
+  <div class="article exchange">
+    <div class="article-left-subsection">
+      <p class="category">CATEGORY: EXCHANGE</p>
+
+      <h1 class="article-title">How To Create A Retention Policy</h1>
+      <p class="article-subtitle bold">Step 1. Enable Archiving</p>
+      <p class="article-instructions">Enable archiving for the mailboxes that will be assigned the retention policy.
+        You can
+        do this step first or save it for last. Note that when archiving is enabled, the “Default MRM Policy” is
+        applied by default which includes the “Default 2 year move to archive” retention tag.</p>
+      <ol>
+        <li>Log into the <span class="bold">Exchange Admin Center</span>, select <span class="bold">Recipients</span>
+          and then <span class="bold">Mailboxes</span></li>
+        <li>You can bulk-enable archiving by holding <span class="bold">Shift</span> or <span class="bold">Ctrl</span>
+        </li>
+        <li>On the right, look for <span class="bold">Archive</span> and select <span class="bold">Enable</span></li>
+      </ol>
+      <p class="article-subtitle bold">Step 2. Create A Retention Tag</p>
+      <p class="article-instructions">When creating a new retention tag, it is applied to the entire mailbox by
+        default.</p>
+      <ol>
+        <li>From <span class="bold">Compliance Management</span> navigate to <span class="bold">Retention Tags</span>
+          and click <span class="bold">Add+</span></li>
+        <li>Name the retention tag and check a <span class="bold">Retention action:</span></li>
+        <p class="article-notes">Delete and Allow Recovery</p>
+        <p class="article-notes">Permanently Delete</p>
+        <p class="article-notes">Move to Archive</p>
+        <li>Set the <span class="bold">Retention period:</span></li>
+        <p class="article-notes">Never or enter a number in days</p>
+      </ol>
+      <p class="article-subtitle bold">Step 3. Create A Retention Policy</p>
+      <p class="article-instructions">After creating the retention tag, create a retention policy and add the
+        retention tag to
+        that policy.</p>
+      <ol>
+        <li>From <span class="bold">Compliance Management</span> navigate to <span class="bold">Retention
+            Policies</span> and click <span class="bold">Add +</span></li>
+        <li>Name the retention policy and add the retention tag you created in the previous step</li>
+        <li>click <span class="bold">Save</span></li>
+      </ol>
+
+      <p class="article-subtitle bold">Step 4. Apply The Retention Policy</p>
+      <p class="article-instructions">Apply the retention policy individually or by bulk</p>
+      <ol>
+        <li>Select a mailbox and select <span class="bold">mailbox features</span></li>
+        <li>Click on the drop-down list under <span class="bold">Retention policy:</span> and select a retention
+          policy</li>
+        <li>You can confirm that the retention policy is working by checking <span class="bold">mailbox
+            features</span> and to the right it should say <span class="bold">Archiving: Enabled</span></li>
+      </ol>
+    </div>
+    <div class="article-right-subsection">
+      <img src="./png/retention1.png" alt="retention1">
+      <img src="./png/retention2.png" alt="retention2">
+      <img src="./png/retention3.png" alt="retention3">
+    </div>
+  </div>
+  <!-- failed search -->
+  <div id="failed-search-page" class="hide">
+    <h1>=(</h1>
+    <h1 id="failed-search-message"></h1>
+  </div>
+  <!-- footer -->
+  <footer>
+    <div class="footer-flex">
+      <img src="./png/it.png" alt="it-img">
+      <p> Icon made by <a href="https://www.flaticon.com/authors/smashicons" target="_blank">SmashIcons</a> from <a
+          href="https://www.flaticon.com/" target="_blank">www.flaticon.com</a></p>
+    </div>
+  </footer>
+  <script src="https://kit.fontawesome.com/a9ac3ef23f.js" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
