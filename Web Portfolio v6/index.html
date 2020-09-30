@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Christina Punla</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="homepage" class="homepage">
+      <nav>
+        <!-- hamburger -->
+        <div class="hamburger">
+          <div class="hamburger-line"></div>
+          <div class="hamburger-line"></div>
+          <div class="hamburger-line"></div>
+        </div>
+        <ul class="nav-menu">
+          <li>
+            <a href="#about">
+              About
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/ChrAshPun?tab=repositories"
+              target="_blank"
+            >
+              GitHub
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/christina-punla/"
+              target="_blank"
+            >
+              LinkedIn
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- cloud, rain, and homepage title -->
+      <div class="homepage-subsection">
+        <img class="cloud-img" src="./png/Cloud-icon.png" alt="" />
+        <div id="rain-area"></div>
+        <div id="homepage-title">
+          <h1 class="my-name">Christina Punla</h1>
+          <div class="homepage-line"></div>
+          <h1 class="my-position">Web Developer</h1>
+        </div>
+      </div>
+    </div>
+    <div id="about" class="about-me-page">
+      <div class="about-me-section">
+        <h1>About Me</h1>
+        <div class="about-me-subsection-one">
+          <div class="about-me-profile-pic">
+            <img src="./png/profile-pic-blknwhite.png" alt="" />
+          </div>
+          <div class="about-me-profile-info">
+            <ul>
+              <li>
+                <img src="./png/profile-icon.png" alt="" />Front-end web
+                developer
+              </li>
+              <li><img src="./png/location-icon.png" alt="" />New Jersey</li>
+              <li>
+                <img src="./png/email-icon.png" alt="" />punlac1222@gmail.com
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="about-me-subsection-two">
+          <p>
+            I'm a self-motivated front-end web developer with experience in
+            cloud technologies. My friends and family would describe me as
+            independent, humble and hardworking. When I'm not coding, I like
+            playing piano, cycling, playing video games and meeting new people.
+          </p>
+        </div>
+      </div>
+      <div class="border-bottom"></div>
+    </div>
+    <!-- IT Blog Section -->
+    <div class="it-blog-page">
+      <div class="it-blog-flexbox">
+        <div class="it-blog-subsection-one">
+          <h1>IT Blog</h1>
+          <p class="it-blog-link">
+            Link:
+            <a href="http://blog.christinapunla.com" target="_blank"
+              >http//blog.christinapunla.com</a
+            >
+          </p>
+          <p class="paragraph">
+            A personal website made with HTML/CSS/JS. I used an Amazon S3 bucket
+            for static website hosting.
+          </p>
+          <div class="tech-flex-container">
+            <img
+              style="width: 60px; height: 35px"
+              src="./png/JSIcon.png"
+              alt=""
+            />
+            <img src="./png/VSCIcon.png" alt="" />
+            <img src="./png/s3BucketIcon.png" alt="" />
+          </div>
+          <a
+            href="https://github.com/ChrAshPun/HTML-CSS-JavaScript/tree/master/IT%20Blog%20v2"
+            target="_blank"
+            ><button>GitHub</button></a
+          >
+        </div>
+        <img class="IT-Blog-img" src="./png/ITBlog3.png" alt="" />
+      </div>
+      <div class="border-bottom"></div>
+    </div>
+    <!-- Tip App Section -->
+    <div class="tip-app-page">
+      <div class="tip-app-section-flexbox">
+        <!-- Tip App - subsection one -->
+        <div class="tip-app-subsection-one">
+          <div id="tip-app-background" class="green-mode-tip-bg">
+            <div class="title-container">
+              <p class="title">Tip Calculator</p>
+            </div>
+            <div id="tip-container" class="green-mode-tip-container">
+              <div id="total-tip">
+                <p>Total tip:</p>
+                <p class="add-totaltip"></p>
+              </div>
+              <div id="tip-per-person">
+                <p>Tip per person:</p>
+                <p class="add-tipperperson"></p>
+              </div>
+              <div id="total-per-person">
+                <p>Total per person:</p>
+                <p class="add-totalperperson"></p>
+              </div>
+              <div id="total-bill-amount">
+                <p>Total bill amount:</p>
+                <p class="add-totalbillamount"></p>
+              </div>
+            </div>
+            <div class="buttons-container">
+              <input
+                id="tip-bill-input"
+                class="green-mode-tip-input"
+                type="number"
+                step="0.01"
+                placeholder="Enter bill amount"
+              />
+              <input
+                id="tip-percent-input"
+                class="green-mode-tip-input"
+                type="number"
+                placeholder="Enter tip %"
+              />
+              <input
+                id="tip-people-input"
+                class="green-mode-tip-input"
+                type="number"
+                placeholder="Number of people"
+              />
+              <button id="tip-submit-btn" class="green-mode-tip-submit">
+                Calculate Tip
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Tip App Info - subsection two -->
+        <div class="tip-app-subsection-two">
+          <h1>Tip Calculator</h1>
+          <p class="paragraph">
+            A Tip Calculator made with HTML/CSS/JS. I designed the application
+            with Adobe XD using a gray scale and added color afterwards.
+          </p>
+          <div class="tech-flex-container">
+            <img
+              style="width: 60px; height: 35px"
+              src="./png/JSIcon.png"
+              alt=""
+            />
+            <img src="./png/VSCIcon.png" alt="" />
+            <img src="./png/AdobeXDIcon.png" alt="" />
+          </div>
+          <a href="#!" target=""
+            ><button id="tip-gray-btn">Gray Mode</button></a
+          >
+          <a href="#!" target=""
+            ><button id="tip-green-btn">Green Mode</button></a
+          >
+          <a
+            href="https://github.com/ChrAshPun/HTML-CSS-JavaScript/tree/master/Tip%20Calculator"
+            target="_blank"
+            ><button id="tip-github-btn">GitHub</button></a
+          >
+        </div>
+      </div>
+      <div class="border-bottom"></div>
+    </div>
+    <div class="python-page">
+      <div class="python-section-flexbox">
+        <!-- python info - subsection one -->
+        <div class="python-subsection-one">
+          <h1>Python Projects</h1>
+          <p class="python-paragraph">
+            Simple games that can be played on the Terminal.
+          </p>
+          <div class="python-tech-flex-container">
+            <img src="./png/PythonLogo.png" alt="" />
+            <img src="./png/JupyterNotebookLogo.png" alt="" />
+            <img src="./png/CommandLineIcon.png" alt="" />
+          </div>
+          <a href="https://github.com/ChrAshPun/Python" target="_blank"
+            ><button>GitHub</button></a
+          >
+        </div>
+        <!-- python slides - subsection two -->
+        <img class="python-subsection-two" src="./png/Blackjack2.png" alt="" />
+        <!-- <div class="python-caption"><p>Blackjack</p></div> -->
+      </div>
+      <div class="border-bottom"></div>
+    </div>
+    <!-- Certification Section -->
+    <div class="certification-page">
+      <div id="cert-section" class="fade-in">
+        <div id="cert-section-title">
+          <h1>IT Certifications</h1>
+        </div>
+        <div id="timeline-container">
+          <div id="years-container">
+            <div class="year">2017</div>
+            <div class="year">2018</div>
+            <div class="year">2019</div>
+            <div class="year">2020</div>
+          </div>
+          <div id="timeline">
+            <div class="dot"></div>
+            <div class="line"></div>
+            <div class="dot"></div>
+            <div class="line"></div>
+            <div class="dot"></div>
+            <div class="line"></div>
+            <div class="dot"></div>
+          </div>
+          <div id="downward-lines-container">
+            <div class="downward-lines-flex line-1">
+              <div class="downward-line"></div>
+              <div class="cert-container">
+                <p class="cert-title">CompTIA A+</p>
+              </div>
+            </div>
+            <div class="downward-lines-flex line-2">
+              <div class="downward-line"></div>
+              <div class="cert-container">
+                <p class="cert-title">MCSA: Office 365 Certified</p>
+              </div>
+            </div>
+            <div class="downward-lines-flex line-3">
+              <div class="downward-line"></div>
+              <div class="cert-container">
+                <p class="cert-title">MCSA: Windows 10 Certified</p>
+              </div>
+            </div>
+            <div class="downward-lines-flex line-4">
+              <div class="downward-line"></div>
+              <div class="cert-container">
+                <p class="cert-title">CompTIA Network+</p>
+              </div>
+            </div>
+            <div class="downward-lines-flex line-5">
+              <div class="downward-line"></div>
+              <div class="cert-container">
+                <p class="cert-title">AWS Solutions Architect</p>
+              </div>
+            </div>
+            <div class="downward-lines-flex line-6">
+              <div class="downward-line"></div>
+              <div class="cert-container">
+                <p class="cert-title">AWS Developer Associate</p>
+              </div>
+            </div>
+            <div class="downward-lines-flex line-7 ">
+              <div class="downward-line"></div>
+              <div class="cert-container">
+                <p class="cert-title">
+                  Microsoft Certified: Azure Administrator Associate
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="border-bottom"></div>
+    </div>
+    <!-- footer -->
+    <footer>
+      <a href="#homepage">Back to Top</a>
+    </footer>
+  </body>
+  <script
+    src="https://kit.fontawesome.com/a9ac3ef23f.js"
+    crossorigin="anonymous"
+  ></script>
+  <script src="./tip-app-script.js"></script>
+  <script src="./laptop-script.js"></script>
+  <script src="./script.js"></script>
+</html>
