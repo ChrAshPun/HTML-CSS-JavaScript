@@ -1,0 +1,272 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+ -webkit-font-smoothing: antialiased;
+ -moz-osx-font-smoothing: grayscale;
+ background-color: whitesmoke;
+}
+
+.App {
+ position: relative;
+ width: 375px;
+ height: 812px;
+ padding: 0;
+ box-sizing: border-box;
+ margin: 50px auto;
+ border-radius: 30px;
+ background-color: white;
+ background: #5DADE2;  /* fallback for old browsers */
+ background: -webkit-linear-gradient(to, #2F80ED, #56CCF2);  /* Chrome 10-25, Safari 5.1-6 */
+ background: linear-gradient(to top, #2F80ED,#5DADE2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.Header {
+  position: relative;
+  height: 140px;
+  padding: 40px 0;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.start-page-title {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+
+#play-button {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color:  #57a9e0;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 30px;
+  /* x-axis y-axis blur spread */
+  box-shadow: 0px 5px 10px 0px 	#707070;
+  outline: none;
+}
+
+#play-button:hover {
+  transform: translate(-50%, -40%);
+  box-shadow: 0px 3px 6px 0px #707070;
+  transition: all 0.25s;
+
+}
+
+.Header > a {
+  position: absolute;
+  color: black;
+  left: 20px;
+  top: 40px;
+}
+
+.top-menu {
+ width: 360px;
+ display: flex;
+ flex-direction: row;
+ justify-content: space-between;
+ margin: 10px auto;
+}
+
+.ClearBoard {
+ color: #404040;
+ font-size: 15px;
+ font-weight: 500;
+ background-color:white;
+ padding: 5px 12px;
+ border: none;
+ border-radius: 20px;
+}
+
+
+.ClearBoard:hover,
+.Puzzle-left-btn:hover,
+.Puzzle-right-btn:hover 
+{
+  background-color: #2F80ED;
+  background-color: #F5F5F5;
+  transition: all 0.25s;
+}
+
+.Puzzle-container {
+ display: flex;
+}
+
+.Puzzle-container > p {
+ color: gray;
+ font-weight: 600;
+ margin: 0 10px;
+}
+
+.Puzzle-left-btn, .Puzzle-right-btn {
+ color: gray;
+ padding: 0 7px;
+ border: none;
+ border-radius: 20px;
+}
+
+#Solved {
+  transform: translate(-10px, 3px);
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.full-board {
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: space-between;
+ align-content: space-between;
+ width: 360px;
+ height: 360px;
+ background-color: white;
+ border: 3px solid black;
+ margin: 0 auto;
+}
+
+.hide {
+  display: none;
+}
+
+.subgrid {
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: space-between;
+ align-content: space-between;
+ width: 118px;
+ height: 118px;
+ background-color: #DCDCDC;
+ border: 1px solid #A9A9A9;
+}
+
+.unselectable-block {
+  position: relative;
+  width: 38px;
+  height: 38px;
+  background-color: #F5F5F5;
+  z-index: 10;  
+  outline: none;
+}
+
+.block {
+ position: relative;
+ width: 38px;
+ height: 38px;
+ background-color: white;
+ z-index: 10;
+}
+
+.block > p,
+.unselectable-block > p {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+font-size: 18px;
+}
+
+.block:hover {
+ background-color: #85C1E9;
+ transition: all 0.25s;
+}
+
+#current-puzzle-menu {
+  color: 	#A9A9A9;
+  font-weight: 400;
+  margin: 5px 0 0 10px;
+}
+
+.ControlPad {
+ position: relative;
+ width: 100%;
+ height: 265px;
+}
+
+.ControlPad-container {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+display: flex;
+flex-direction: row;
+align-items: center;
+}
+
+.ControlPad-subcontainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.Numpad {
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: space-between;
+ align-content: space-between;
+ width: 160px;
+ height: 160px;
+ background-color: #DCDCDC;
+ border: 1px solid #DCDCDC;
+}
+
+.numpad-block {
+ position: relative;
+ width: 52px;
+ height: 52px;
+ background-color: white;
+}
+
+.numpad-block:hover {
+  background-color: #F5F5F5; 
+  transition: all 0.25s;
+ }
+
+.numpad-block > button {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+font-size: 20px;
+font-weight: 600;
+color: black;
+background-color: transparent;
+padding: 10px 15px;
+border: none;
+outline: none;
+}
+
+.Erase-container, .Undo-container {  
+ width: 70px;
+ text-align: center;
+ margin: 10px 0;
+ cursor: pointer;
+}
+
+.erase-img, .undo-img {
+ width: 35px;
+ height: 35px;
+ color: black;
+ background-color: none;
+ padding: 4px 0;
+ margin: 0 auto;
+}
+
+.Erase-container > p,
+.Undo-container > p {  
+ font-size: 16px;
+ padding: 5px 0;
+ margin: 0px;
+}

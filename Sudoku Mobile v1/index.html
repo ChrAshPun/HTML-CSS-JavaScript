@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600;1,700;1,800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="App">
+    <div class="Header">
+      <a href="./start.html"><i class="fas fa-chevron-left"></i></a>
+      <p>Sudoku</p>
+    </div>
+    <div class="top-menu">
+      <button onclick=clearBoard() class="ClearBoard">Clear Board</button>
+      <p id="Solved"></p>
+    </div>
+
+    <div id="puzzle-1" class="full-board">
+      <!-- first subgrid -->
+      <div id="subgrid-1" class="subgrid">
+        <div tabIndex="1" class="block">
+          <p class="bold">4</p>
+        </div>
+        <div tabIndex="2" class="block">
+          <p></p>
+        </div>
+        <div tabIndex="3" class="block">
+          <p class="bold">1</p>
+        </div>
+        <div tabIndex="10" class="block">
+          <p class="bold">2</p>
+        </div>
+        <div tabIndex="11" class="block">
+          <p></p>
+        </div>
+        <div tabIndex="12" class="block">
+          <p></p>
+        </div>
+        <div tabIndex="19" class="block">
+          <p></p>
+        </div>
+        <div tabIndex="20" class="block">
+          <p class="bold">7</p>
+        </div>
+        <div tabIndex="21" class="block">
+          <p></p>
+        </div>
+      </div>
+      <!-- second subgrid -->
+      <div class="subgrid">
+        <div tabIndex="4" class="block">
+          <p class="bold">2</p>
+        </div>
+        <div tabIndex="5" class="block">
+          <p class="bold">9</p>
+        </div>
+        <div tabIndex="6" class="block">
+          <p></p>
+        </div>
+        <div tabIndex="13" class="block">
+          <p class="bold">3</p>
+        </div>
+        <div tabIndex="14" class="block">
+          <p></p>
+        </div>
+        <div tabIndex="15" class="block">
+          <p></p>
+        </div>
+        <div tabIndex="22" class="block">
+          <p></p>
+        </div>
+        <div tabIndex="23" class="block">
+          <p class="bold">8</p>
+        </div>
+        <div tabIndex="24" class="block">
+          <p></p>
+        </div>
+      </div>
+      <!-- third subgrid -->
+      <div class="subgrid">
+        <div tabIndex="7" class="block">
+          <p></p>
+        </div>
+        <div tabIndex="8" class="block">
+          <p class="bold">7</p>
+        </div>
+        <div tabIndex="9" class="block">
+          <p class="bold">5</p>
+        </div>
+        <div tabIndex="16" class="block">
+          <p class="bold">8</p>
+        </div>
+        <div tabIndex="17" class="block">
+          <p></p>
+        </div>
+        <div tabIndex="18" class="block">
+          <p></p>
+        </div>
+        <div tabIndex="25" class="block">
+          <p></p>
+        </div>
+        <div tabIndex="26" class="block">
+          <p></p>
+        </div>
+        <div tabIndex="27" class="block">
+          <p class="bold">6</p>
+        </div>
+      </div>
+      <!-- fourth subgrid -->
+      <div class="subgrid">
+        <div tabIndex="28" class="block">
+          <p></p>
+        </div>
+        <div tabIndex="29" class="block">
+          <p></p>
+        </div>
+        <div tabIndex="30" class="block">
+          <p></p>
+        </div>
+        <div tabIndex="37" class="block">
+          <p class="bold">1</p>
+        </div>
+        <div tabIndex="38" class="block">
+          <p></p>
+        </div>
+        <div tabIndex="39" class="block">
+          <p class="bold">5</p>
+        </div>
+        <div tabIndex="46" class="block">
+          <p class="bold">7</p>
+        </div>
+        <div tabIndex="47" class="block">
+          <p class="bold">3</p>
+        </div>
+        <div tabIndex="48" class="block">
+          <p></p>
+        </div>
+      </div>
+      <!-- fifth subgrid -->
+      <div class="subgrid">
+        <div tabIndex="31" class="block">
+          <p class="bold">1</p>
+        </div>
+        <div tabIndex="32" class="block">
+          <p></p>
+        </div>
+        <div tabIndex="33" class="block">
+          <p class="bold">3</p>
+        </div>
+        <div tabIndex="40" class="block">
+          <p></p>
+        </div>
+        <div tabIndex="41" class="block">
+          <p></p>
+        </div>
+        <div tabIndex="42" class="block">
+          <p></p>
+        </div>
+        <div tabIndex="49" class="block">
+          <p class="bold">6</p>
+        </div>
+        <div tabIndex="50" class="block">
+          <p></p>
+        </div>
+        <div tabIndex="51" class="block">
+          <p class="bold">8</p>
+        </div>
+      </div>
+      <!-- sixth subgrid -->
+      <div class="subgrid">
+        <div tabIndex="34" class="block">
+          <p></p>
+        </div>
+        <div tabIndex="35" class="block">
+          <p class="bold">6</p>
+        </div>
+        <div tabIndex="36" class="block">
+          <p class="bold">2</p>
+        </div>
+        <div tabIndex="43" class="block">
+          <p class="bold">4</p>
+        </div>
+        <div tabIndex="44" class="block">
+          <p></p>
+        </div>
+        <div tabIndex="45" class="block">
+          <p class="bold">3</p>
+        </div>
+        <div tabIndex="52" class="block">
+          <p></p>
+        </div>
+        <div tabIndex="53" class="block">
+          <p></p>
+        </div>
+        <div tabIndex="54" class="block">
+          <p></p>
+        </div>
+      </div>
+      <!-- seventh subgrid -->
+      <div class="subgrid">
+        <div tabIndex="55" class="block">
+          <p class="bold">6</p>
+        </div>
+        <div tabIndex="56" class="block">
+          <p></p>
+        </div>
+        <div tabIndex="57" class="block">
+          <p></p>
+        </div>
+        <div tabIndex="64" class="block">
+          <p></p>
+        </div>
+        <div tabIndex="65" class="block">
+          <p></p>
+        </div>
+        <div tabIndex="66" class="block">
+          <p class="bold">7</p>
+        </div>
+        <div tabIndex="73" class="block">
+          <p class="bold">8</p>
+        </div>
+        <div tabIndex="74" class="block">
+          <p class="bold">9</p>
+        </div>
+        <div tabIndex="75" class="block">
+          <p></p>
+        </div>
+      </div>
+      <!-- eighth subgrid -->
+      <div class="subgrid">
+        <div tabIndex="58" class="block">
+          <p></p>
+        </div>
+        <div tabIndex="59" class="block">
+          <p class="bold">2</p>
+        </div>
+        <div tabIndex="60" class="block">
+          <p></p>
+        </div>
+        <div tabIndex="67" class="block">
+          <p></p>
+        </div>
+        <div tabIndex="68" class="block">
+          <p></p>
+        </div>
+        <div tabIndex="69" class="block">
+          <p class="bold">1</p>
+        </div>
+        <div tabIndex="76" class="block">
+          <p></p>
+        </div>
+        <div tabIndex="77" class="block">
+          <p class="bold">6</p>
+        </div>
+        <div tabIndex="78" class="block">
+          <p class="bold">5</p>
+        </div>
+      </div>
+      <!-- ninth subgrid -->
+      <div class="subgrid">
+        <div tabIndex="61" class="block">
+          <p></p>
+        </div>
+        <div tabIndex="62" class="block">
+          <p class="bold">3</p>
+        </div>
+        <div tabIndex="63" class="block">
+          <p></p>
+        </div>
+        <div tabIndex="70" class="block">
+          <p></p>
+        </div>
+        <div tabIndex="71" class="block">
+          <p></p>
+        </div>
+        <div tabIndex="72" class="block">
+          <p class="bold">4</p>
+        </div>
+        <div tabIndex="79" class="block">
+          <p class="bold">1</p>
+        </div>
+        <div tabIndex="80" class="block">
+          <p></p>
+        </div>
+        <div tabIndex="81" class="block">
+          <p class="bold">7</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="ControlPad">
+      <div class="ControlPad-container">
+        <div class="ControlPad-subcontainer">
+          <div id="Erase-button" class="Erase-container">
+            <div class="erase-img">
+              <i class="fas fa-eraser fa-2x"></i>
+            </div>
+            <p>Erase</p>
+          </div>
+          <div id="Undo-button" class="Undo-container">
+            <div class="undo-img">
+              <i class="fas fa-undo fa-2x"></i>
+            </div>
+            <p>Undo</p>
+          </div>
+        </div>
+        <div class="Numpad">
+          <div class="numpad-block">
+            <button onclick=inputNumber(1)>1</button>
+          </div>
+          <div class="numpad-block">
+            <button onclick=inputNumber(2)>2</button>
+          </div>
+          <div class="numpad-block">
+            <button onclick=inputNumber(3)>3</button>
+          </div>
+          <div class="numpad-block">
+            <button onclick=inputNumber(4)>4</button>
+          </div>
+          <div class="numpad-block">
+            <button onclick=inputNumber(5)>5</button>
+          </div>
+          <div class="numpad-block">
+            <button onclick=inputNumber(6)>6</button>
+          </div>
+          <div class="numpad-block">
+            <button onclick=inputNumber(7)>7</button>
+          </div>
+          <div class="numpad-block">
+            <button onclick=inputNumber(8)>8</button>
+          </div>
+          <div class="numpad-block">
+            <button onclick=inputNumber(9)>9</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</body>
+<script src="https://kit.fontawesome.com/a9ac3ef23f.js" crossorigin="anonymous"></script>
+<script src="./script.js"></script>
+
+</html>
