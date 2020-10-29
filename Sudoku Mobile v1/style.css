@@ -93,29 +93,10 @@ body {
 
 
 .ClearBoard:hover,
-.Puzzle-left-btn:hover,
-.Puzzle-right-btn:hover 
 {
   background-color: #2F80ED;
   background-color: #F5F5F5;
   transition: all 0.25s;
-}
-
-.Puzzle-container {
- display: flex;
-}
-
-.Puzzle-container > p {
- color: gray;
- font-weight: 600;
- margin: 0 10px;
-}
-
-.Puzzle-left-btn, .Puzzle-right-btn {
- color: gray;
- padding: 0 7px;
- border: none;
- border-radius: 20px;
 }
 
 #Solved {
