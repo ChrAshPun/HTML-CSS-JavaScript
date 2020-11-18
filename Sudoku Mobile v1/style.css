@@ -94,7 +94,6 @@ body {
 
 .ClearBoard:hover,
 {
-  background-color: #2F80ED;
   background-color: #F5F5F5;
   transition: all 0.25s;
 }
